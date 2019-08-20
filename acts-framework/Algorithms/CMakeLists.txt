@@ -1,0 +1,6 @@
+add_subdirectory(Digitization)
+add_subdirectory(Fatras)
+add_subdirectory(Generators)
+#add_subdirectory_if(MaterialMapping USE_GEANT4)
+add_subdirectory(Propagation)
+add_subdirectory(Reconstruction)

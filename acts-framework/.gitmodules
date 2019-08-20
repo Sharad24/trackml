@@ -1,0 +1,6 @@
+[submodule "acts-core"]
+	path = external/acts-core
+	url = ../acts-core.git
+[submodule "acts-fatras"]
+	path = external/acts-fatras
+	url = ../acts-fatras.git

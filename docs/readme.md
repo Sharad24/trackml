@@ -1,4 +1,4 @@
-### Overview
+## Overview
 
 Hi, My name is Sharad Chitlangia and this is a webpage describing the details of my Google Summer of Code 2019 with CERN-HSF.
 
@@ -14,7 +14,7 @@ The Data is created through highly accurate simulation of proton proton beam col
 ### 2. Top-quarks Tracker
 
 This tracker stood 1st in the competition held on Kaggle. It is one of the most elegant solutions in the sense that it utilises the features of the geometry of detectors efficiently which not a lot of other solutions from the first phase of the competition on Kaggle did. The complete tracking can be divided into 5 different steps:
-1. Pair Prediction
+1. Pair Prediction using Logistic Regression
 2. Triplet Prediction
 3. Extension of Triplets to Tracks
 4. Addition of duplicates to tracks
@@ -22,11 +22,40 @@ This tracker stood 1st in the competition held on Kaggle. It is one of the most 
 
 The final 3 steps utilise a unique Outlier Density Estimation Method which is also used by one of the top performers of the second phase. 
 
-This algorithm can be run in the framework in the example binaries by appending the algorithm to the Sequencer. It's important to set the right paths for the data in the code before trying to run them.
+This algorithm `Topquarks` can be run in the framework in the example binaries by appending the algorithm to the Sequencer in the Reconstruction.cpp example. It's important to set the right paths for the data in the code before trying to run them. A short example is given below:
+
+```
+Topquarks::Config reconstruct;
+reconstruct.spacePointCollection = digi.spacePointCollection;
+seq.appendEventAlgorithms(
+    {std::make_shared<Topquarks>(reconstruct, logLevel)});
+```
 
 ### 3. Directed Acyclic Graphs based Neural Network Tracker
 
+This tracker stood 3rd in the second phase of the competition and in essence just better the initial pair and triplet prediction of the Top-quarks tracker. It utilises 3 Neural Network in total, 2 for pair prediction and 1 for triplet prediction. The data for the pair and triplet predictions is organised in a Directed Acyclic Graph which helps is easing the pair and triplet finding. After the triplets are predicted, the final tracks are obtained using the same method used by the Top-quarks tracker i.e., Outlier Density Estimation. 
+
+This algorithm `DAGbasedNNTracker` can be run in the framework in the example binaries by appending the algorithm to the Sequencer in the Reconstruction.cpp example. It's important to set the right paths for the data in the code before trying to run them. A short example is given below:
+
+```
+DAGbasedNNTracker::Config reconstruct;
+reconstruct.spacePointCollection = digi.spacePointCollection;
+seq.appendEventAlgorithms(
+    {std::make_shared<DAGbasedNNTracker>(reconstruct, logLevel)});
+```
+
 ### 4. Mikado Tracker
+
+This tracker stood 1st in the second phase of the competition and is currently one of the best and probably simple approaches to solving the problem of track reconstruction. The algorithm builds by first defining some sets of parameters by running analysis on sample data. Then it builds local 3-hit helices by building from a single hit then looking for a second hit followed by the third hit. The search area for these hit finding are defined in the parameters. This is followed by tracklet prolongation which is done by extending the 3-d helix. The helix is discarded if no hits can be found and is kept if hits are found. Final hits are assigned by identifying the best tracks.
+
+This algorithm `MikadoTracker` can be run in the framework in the example binaries by appending the algorithm to the Sequencer in the Reconstruction.cpp example. It's important to set the right paths for the data in the code before trying to run them. A short example is given below:
+
+```
+MikadoTracker::Config reconstruct;
+reconstruct.spacePointCollection = digi.spacePointCollection;
+seq.appendEventAlgorithms(
+    {std::make_shared<MikadoTracker>(reconstruct, logLevel)});
+```
 
 ### 5. Other Tasks
 

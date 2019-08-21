@@ -59,6 +59,23 @@ seq.appendEventAlgorithms(
 
 ### 5. Other Tasks
 
+I also worked on some other tasks like building a pytorch recontruction example using the C++ frontend of pytorch - libtorch. This example shows how to load a pytorch model using `torch::jit::load` as a `torch::jit::script:Module`. An example with running inference on this model is shown below:
+
+```
+torch::jit::script::Module module;
+module = torch::jit::load("/tmp/tmp.pb");
+
+// Declare sample input
+std::vector<torch::jit::IValue> inputs;
+inputs.push_back(torch::ones({2, 8}));
+
+// Get output
+at::Tensor output = module.forward(inputs).toTensor();
+
+// Print Output
+ACTS_INFO(output);
+```
+
 ### 6. Future Work
 
 ### 7. Acknowledgements

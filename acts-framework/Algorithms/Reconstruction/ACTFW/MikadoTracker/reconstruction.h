@@ -1,4 +1,0 @@
-#ifndef RECONSTRUCTION_H
-#define RECONSTRUCTION_H
-
-#endif

@@ -1,5 +1,0 @@
-add_library(PolynomFit.o PolynomFit.cxx)
-add_library(AnalyseGeometry.o AnalyseGeometry.cxx)
-add_library(AnalyseField.o AnalyseField.cxx)
-add_library(TrackFitTest.o TrackFitTest.cxx)
-# target_include_directories(TrackFitTest.o INTERFACE MikadoTracker)

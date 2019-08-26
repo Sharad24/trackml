@@ -8,8 +8,7 @@ Hi, My name is Sharad Chitlangia and this page describes the details of my Googl
 3. DAGbasedNNTracker <br>
 4. Mikado Tracker <br>
 5. Running pytorch models in ACTS and other tasks <br>
-6. Future Work <br>
-7. Acknowledgements <br>
+6. Acknowledgements <br>
 
 ### 1. Data
 
@@ -83,6 +82,6 @@ at::Tensor output = module.forward(inputs).toTensor();
 ACTS_INFO(output);
 ```
 
-### 6. Future Work
+### 6. Acknowledgements
 
-### 7. Acknowledgements
+I am very grateful to my mentors Moritz Kiehn, David Rousseau and Andreas Salzburger for being available to my doubts and queries all the time. Their help has been invaluable to me.

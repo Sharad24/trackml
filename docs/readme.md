@@ -1,6 +1,6 @@
-## Overview
+## Implementation and Optimisation in ACTS of algorithms exposed in TrackML challenge
 
-Hi, My name is Sharad Chitlangia and this page describes the details of my Google Summer of Code 2019 with CERN-HSF.
+Hi, My name is Sharad Chitlangia and this page describes the details of my Google Summer of Code 2019 with CERN-HSF. My work is currently being merged in the main framework repository ([merge request](https://gitlab.cern.ch/acts/acts-framework/merge_requests/152)): . The complete code can be found on github [here](https://github.com/Sharad24/acts-framework), where I primarily worked on the Reconstruction directory inside Algorithms.
 
 I worked on porting three Particle Track Reconstruction algorithms into acts-framework and exploring few other tasks. ACTS stands for A Common Tracking Software aims to provide a set of tools for the ATLAS experiment encapsulating track reconstruction software into a generic, framework- and experiment-independent software package. The three Track Reconstruction algorithms were exposed in the recent competitions on trackml hosted on Kaggle and Codalab. They are described in a bit more detail below.
 

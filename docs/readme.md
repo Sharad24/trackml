@@ -3,11 +3,11 @@
 Hi, My name is Sharad Chitlangia and this page describes the details of my Google Summer of Code 2019 with CERN-HSF. My work is currently being merged in the main framework repository ([merge request](https://gitlab.cern.ch/acts/acts-framework/merge_requests/152)): . The complete code can be found on github [here](https://github.com/Sharad24/acts-framework), where I primarily worked on the Reconstruction directory inside Algorithms.
 
 I worked on porting three Particle Track Reconstruction algorithms into acts-framework and exploring few other tasks. [ACTS](https://gitlab.cern.ch/acts) stands for A Common Tracking Software aims to provide a set of tools for the ATLAS experiment encapsulating track reconstruction software into a generic, framework- and experiment-independent software package. The three Track Reconstruction algorithms were exposed in the recent competitions on [trackml](https://sites.google.com/site/trackmlparticle/) hosted on [Kaggle](https://www.kaggle.com/c/trackml-particle-identification) and Codalab. They are described in a bit more detail below. The rest of the page is organised as follows:
-1. Data
-2, 3 and 4 - The Three Reconstruction Algorithms
-5 - Running pytorch models in ACTS and other tasks
-6 - Future Work
-7 - Acknowledgements
+1. Data <br>
+2, 3 and 4 - The Three Reconstruction Algorithms <br>
+5 - Running pytorch models in ACTS and other tasks <br>
+6 - Future Work <br>
+7 - Acknowledgements <br>
 
 ### 1. Data
 

@@ -4,7 +4,9 @@ Hi, My name is Sharad Chitlangia and this page describes the details of my Googl
 
 I worked on porting three Particle Track Reconstruction algorithms into acts-framework and exploring few other tasks. [ACTS](https://gitlab.cern.ch/acts) stands for A Common Tracking Software aims to provide a set of tools for the ATLAS experiment encapsulating track reconstruction software into a generic, framework- and experiment-independent software package. The three Track Reconstruction algorithms were exposed in the recent competitions on [trackml](https://sites.google.com/site/trackmlparticle/) hosted on [Kaggle](https://www.kaggle.com/c/trackml-particle-identification) and Codalab. They are described in a bit more detail below. The rest of the page is organised as follows:
 1. Data <br>
-2, 3 and 4. The Three Reconstruction Algorithms <br>
+2. Top-quarks Reconstruction Algorithm <br>
+3. DAGbasedNNTracker <br>
+4. Mikado Tracker <br>
 5. Running pytorch models in ACTS and other tasks <br>
 6. Future Work <br>
 7. Acknowledgements <br>

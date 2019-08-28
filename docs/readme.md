@@ -84,4 +84,4 @@ ACTS_INFO(output);
 
 ### 6. Acknowledgements
 
-I am very grateful to my mentors Moritz Kiehn, David Rousseau and Andreas Salzburger for being available to my doubts and queries all the time. Their help has been invaluable to me.
+I am very grateful and indebted to my mentors Moritz Kiehn (CERN, UNIGE), Jean-Roch Vlimant (CERN, Caltech), David Rousseau (CERN, LAL) and Andreas Salzburger (CERN) for being available to my doubts and queries all the time. Their help has been invaluable to me.
